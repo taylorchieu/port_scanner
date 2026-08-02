@@ -8,10 +8,10 @@ s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 s.settimeout(5)
 
 #Ask user to input the IP address that they want scanned, which can be saved as a string
-host = input("Please enter the IP address you would like scanned: ")
+host = input("Please enter the IP address you would like to have scanned: ")
 
 #Ask user to input the port that they want scanned, which can be saved as an integer
-port = int(input("Please enter the port you would like scanned: "))
+port = int(input("Please enter the port number you would like to have scanned: "))
 
 #Allow the program to return an error message if the port is closed; otherwise declare that the port is open
 def portScanner(port):
@@ -22,5 +22,7 @@ def portScanner(port):
     else:
         print("The port is open.")
         input("Press Enter to exit the script...")
+    
+
 
 portScanner(port)
